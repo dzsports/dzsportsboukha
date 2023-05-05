@@ -1,0 +1,113 @@
+/* Search.jsx */
+.page {
+    gap: 20px;
+    padding: 25px 30px;
+    /* justify-content: start; */
+    align-items: start;
+}
+.page div {
+    border-radius: 8px;
+    padding: 5px;
+}
+.page div:nth-child(1),
+.page div:nth-child(3){
+    flex-basis: 25%;
+    background-color: #fff;
+}
+.page div:nth-child(2){
+    flex-basis: 50%;
+}
+@media (max-width:850px) {
+    .page {
+        flex-direction: column;
+    }
+    .page div.accounts{
+        width: 100%;
+        order: 2;
+    }
+    .page div.posts{
+        width: 100%;
+        order: 3;
+    }
+    .page div.search{
+        width: 100%;
+        order: 1;
+    }
+}
+
+@media (max-width:767px) {
+    .page {
+        margin-top: 0 !important;
+    }
+}
+label[for="address"].titlesearch {
+    font-weight: 600;
+    font-size: 18px;
+    margin: 10px;
+    text-align: center;
+}
+select {
+    width: fit-content;
+    border-radius: 10px;
+    cursor: pointer;
+}
+button.search {
+    display: block;
+    background-color: var(--main-color);
+    color: #fff;
+    width: 40%;
+    padding: 10px;
+    transition: var(--transition);
+    margin: 15px auto 0;
+    border-radius: 10px;
+}
+input[type="submit"]:hover {
+    background-color: var(--sec-color);
+}
+
+/* Posts.jsx */
+.post {
+    background-color: #fff;
+    margin-bottom: 20px;
+    /* position: relative; */
+}
+.headPost {
+    color: #444;
+    font-size: 20px;
+    align-items: center;
+    border-radius: 8px;
+    padding: 0 5px;
+    cursor: pointer;
+}
+.headPost .userIcon {
+    font-size: 40px;
+}
+.description {
+    color: #555;
+}
+.react {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.react img:nth-child(1) {
+    width: 48px;
+    cursor: pointer;
+    transition: .3s;
+}
+.react img {
+    width: 40px;
+    cursor: pointer;
+}
+.comments {
+    top: 100%;
+    background-color: #fff;
+    padding: 10px;
+    display: none;
+}
+.comments.show {
+    display: block;
+}
+.comments .comment{
+    border-bottom:1px solid #666 ;
+}
